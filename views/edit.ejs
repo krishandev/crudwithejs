@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="h-screen m-5">
+    
+    <div class="flex flex-col item-center justify-center p-2 border-2 border-red-400 mt-10">
+        <div><a class="bg-blue-200 px-2 rounded py-1" href="/read">View All Users</a></div>
+        <h1 class="text-3xl font-semibold ">Update Users</h1>
+        <form action="/update/<%=editedUser._id%>" method="post" class="flex flex-col gap-3 mt-5">
+            <input class="border border-gray-300 w-64 p-1" type="text" placeholder="Enter Image URL" name="image" value="<%=editedUser.image %>"/>
+            <input class="border border-gray-300 w-64 p-1" type="text" placeholder="Enter Name" name="name" value="<%=editedUser.name %>"/>
+            <input class="border border-gray-300 w-64 p-1" type="text" placeholder="Enter Email" name="email" value="<%=editedUser.email %>"/>
+            <button class="border border-blue-500 w-64 bg-blue-500">Update User</button>
+        </form>
+
+    </div>
+    
+</body>
+</html>

@@ -29,6 +29,17 @@ app.get("/delete/:id", async(req, res)=>{
     res.redirect("/read")
 })
 
+app.get("/edit/:userid", async(req, res)=>{
+    let editedUser=await userModel.findOne({_id:req.params.userid})
+    res.render("edit", {editedUser})
+})
+
+app.post("/update/:userid", async(req, res)=>{
+    let {image, name, email}=req.body;
+    updatedUser=await userModel.findOneAndUpdate({_id:req.params.userid}, {image, name, email})
+    res.redirect("/read")
+})
+
 app.listen(3000, (req, res)=>{
     console.log("It's working")
 })

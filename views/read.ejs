@@ -21,7 +21,7 @@
                         <div><h2><%=user.name %></h2></div>
                         <div><h2><%=user.email%> </h2></div>
                         <div class="flex justify-between">
-                            <button class="bg-yellow-500 px-2 py-1 rounded">Edit</button>
+                            <button class="bg-yellow-500 px-2 py-1 rounded"><a href="/edit/<%=user._id %>">Edit</a></button>
                             <button class="bg-red-300 px-2 py-1 rounded"><a href="/delete/<%= user._id %>">Delete</a></button>
                         </div>
                     </div>
